@@ -4,9 +4,7 @@ on:
   push:
     paths:
       - CITATION.cff
-permissions:
-  contents: write
-  pull-requests: write
+permissions: write-all
 jobs:
   convert:
     name: "convert citations"
