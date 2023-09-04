@@ -4,7 +4,8 @@ on:
   push:
     paths:
       - CITATION.cff
-
+permissions:
+  contents: write
 jobs:
   convert:
     name: "convert"
@@ -20,8 +21,8 @@ jobs:
 
       - name: Commit and push Zenodo metadata
         run: |
-          git config --global user.name 'cffconvert GitHub Action'
-          git config --global user.email 'cffconvert@users.noreply.github.com'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .zenodo.json
           git commit -m "Automated update of Zenodo metadata"
           git push
