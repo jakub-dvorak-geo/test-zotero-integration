@@ -8,7 +8,7 @@ permissions:
   contents: read|write
 jobs:
   convert:
-    name: "convert"
+    name: "convert citations"
     runs-on: ubuntu-latest
     steps:
       - name: Check out a copy of the repository
@@ -19,10 +19,9 @@ jobs:
         with:
           args: "--infile ./CITATION.cff --format zenodo --outfile .zenodo.json"
 
-      - name: Commit and push Zenodo metadata
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .zenodo.json
-          git commit -m "Automated update of Zenodo metadata"
-          git push --force
+      - name: Commit and create a Pull Request with the Zenodo file
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: ":robot: Update .zenodo.json"
+          committer: "'github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          title: "[auto] Update .zenodo.json"
