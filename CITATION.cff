@@ -10,7 +10,7 @@ url: "https://web.natur.cuni.cz/gis/etrainee"
 references:
   - authors:
       - family-names: Potůčková
-        given-names: M.
+	given-names: M.
 	orcid: "https://orcid.org/0000-0002-8760-790X"
       - family-names: Albrechtová
         given-names: J.
@@ -25,7 +25,7 @@ references:
         given-names: J.
 	orcid: "https://orcid.org/0000-0001-7845-7738"
       - family-names: Gryguc
-        given-names: K.
+	given-names: K.
 	orcid: "https://orcid.org/0000-0002-8107-6837"
       - family-names: Höfle
         given-names: B.
