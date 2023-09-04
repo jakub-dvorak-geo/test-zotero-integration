@@ -1,10 +1,12 @@
 cff-version: 1.2.0
+
 title: >-
   E-TRAINEE - E-learning course on Time Series Analysis in
   Remote Sensing for Understanding Human-Environment
   Interactions
+
 message: 'If you use this course material, please cite it as below.'
-type: software
+
 authors:
   - name: E-TRAINEE Development Team
 repository-code: 'https://github.com/3dgeo-heidelberg/etrainee'
