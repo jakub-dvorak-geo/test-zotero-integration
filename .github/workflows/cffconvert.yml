@@ -7,7 +7,8 @@ on:
     paths:
       - CITATION.cff
 
-permissions: write-all
+permissions:
+  contents: write
 
 jobs:
   convert:
@@ -24,8 +25,12 @@ jobs:
 
       - name: Commit and push Zenodo metadata
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .zenodo.json
-          git commit -m "Automated update of Zenodo metadata"
-          git push
+          if [[ `git status --porcelain` ]]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git add .zenodo.json
+            git commit -m "Automated update of Zenodo metadata"
+            git push
+           else
+            echo "No changes to the .zotero.json file."
+           fi
