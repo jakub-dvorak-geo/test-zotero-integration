@@ -14,8 +14,7 @@ jobs:
     name: "convert citations"
     runs-on: ubuntu-latest
     outputs:
-        zotero_changed: ${{ steps.check_file_changed.outputs.docs_changed }}
-        
+      zotero_changed: ${{ steps.check_file_changed.outputs.zotero_changed}}
     steps:
       - name: Check out a copy of the repository
         uses: actions/checkout@v3
@@ -29,13 +28,13 @@ jobs:
         shell: pwsh
         run: |
           # Diff HEAD with the previous commit
-          $diff = git diff --name-only .zotero.json
+          $diff = git diff --name-only -- .zotero.json
           # Check if a file under docs/ or with the .cff extension has changed (added, modified, deleted)
           $HasDiff = $diff.Length -gt 0
           # Set the output named "docs_changed"
-          Write-Host "::set-output name=docs_changed::$HasDiff"
+          echo "zotero_changed=$HasDiff" >> "$GITHUB_OUTPUT"
 
-  push:
+  push_zotero:
     name: "Commit and push new Zotero metadata"
     runs-on: ubuntu-latest
     needs: [ convert ]
