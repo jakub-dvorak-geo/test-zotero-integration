@@ -24,6 +24,7 @@ jobs:
 
       - name: Commit and push Zenodo metadata
         run: |
+          echo git status
           if [[ `git status --porcelain` ]]; then
             git config user.name 'github-actions[bot]'
             git config user.email 'github-actions[bot]@users.noreply.github.com'
