@@ -28,14 +28,12 @@ jobs:
       - id: check_file_changed
         shell: pwsh
         run: |
-        # Diff HEAD with the previous commit
-        $diff = git diff --name-only .zotero.json
-
-        # Check if a file under docs/ or with the .cff extension has changed (added, modified, deleted)
-        $HasDiff = $diff.Length -gt 0
-
-        # Set the output named "docs_changed"
-        Write-Host "::set-output name=docs_changed::$HasDiff"
+          # Diff HEAD with the previous commit
+          $diff = git diff --name-only .zotero.json
+          # Check if a file under docs/ or with the .cff extension has changed (added, modified, deleted)
+          $HasDiff = $diff.Length -gt 0
+          # Set the output named "docs_changed"
+          Write-Host "::set-output name=docs_changed::$HasDiff"
 
   push:
     name: "Commit and push new Zotero metadata"
