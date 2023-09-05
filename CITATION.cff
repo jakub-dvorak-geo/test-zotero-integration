@@ -21,12 +21,11 @@ abstract: >-
   partner universities – Charles University, Heidelberg
   University, University of Innsbruck, and University of Warsaw.
 
-
 license: CC-BY-SA-4.0
 
 references:
   - authors:
-      - family-names: Potůčková
+      - family-names: Potůčkováha
         given-names: M.
         orcid: "https://orcid.org/0000-0002-8760-790X"
       - family-names: Albrechtová
