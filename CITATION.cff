@@ -8,11 +8,11 @@ title: >-
 message: 'If you use this course material, please cite it as below.'
 
 authors:
-  - name: E-TRAINEE Development Team
+  - name: E-TRAINEE Development Team dkgak
 
 repository-code: 'https://github.com/3dgeo-heidelberg/etrainee'
 
-url: 'https://3dgeo-heidelberg.github.io/etrainee/balh'
+url: 'https://3dgeo-heidelberg.github.io/etrainee'
 
 abstract: >-
   E-learning course on Time Series Analysis in Remote
