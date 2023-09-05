@@ -12,7 +12,7 @@ authors:
 
 repository-code: 'https://github.com/3dgeo-heidelberg/etrainee'
 
-url: 'https://3dgeo-heidelberg.github.io/etrainee'
+url: 'https://3dgeo-heidelberg.github.io/etrainee/balh'
 
 abstract: >-
   E-learning course on Time Series Analysis in Remote
@@ -25,7 +25,7 @@ license: CC-BY-SA-4.0
 
 references:
   - authors:
-      - family-names: Potůčkováha
+      - family-names: Potůčková
         given-names: M.
         orcid: "https://orcid.org/0000-0002-8760-790X"
       - family-names: Albrechtová
